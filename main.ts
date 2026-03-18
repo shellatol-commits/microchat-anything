@@ -4,9 +4,9 @@ input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
 })
 input.onButtonPressed(Button.A, function () {
     if (i == text_list.length) {
-        i += 1
-    } else {
         i = 0
+    } else {
+        i += 1
     }
     selected = text_list[i]
     basic.showString("" + (selected))
