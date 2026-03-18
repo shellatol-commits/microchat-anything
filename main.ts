@@ -1,5 +1,6 @@
 input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
     basic.showString("Press button A to choose letter. Press button B to type letter. Press logo to show your last received message. Press buttons A+B to send message. Long press logo to show this helper.")
+    control.reset()
 })
 input.onButtonPressed(Button.A, function () {
     if (i == text_list.length) {
@@ -12,6 +13,7 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.AB, function () {
     radio.sendString(message)
+    control.reset()
 })
 radio.onReceivedString(function (receivedString) {
     rm = receivedString
