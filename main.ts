@@ -76,7 +76,8 @@ function setup () {
     "@",
     ":",
     ".",
-    ","
+    ",",
+    "?"
     ]
 }
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
