@@ -2,7 +2,11 @@ input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
     basic.showString("Press button A to choose letter. Press button B to type letter. Press logo to show your last received message. Press buttons A+B to send message. Long press logo to show this helper.")
 })
 input.onButtonPressed(Button.A, function () {
-    i += 1
+    if (i == text_list.length) {
+        i += 1
+    } else {
+        i = 0
+    }
     selected = text_list[i]
     basic.showString("" + (selected))
 })
@@ -83,8 +87,8 @@ function setup () {
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showString(rm)
 })
-let text_list: string[] = []
 let selected = ""
+let text_list: string[] = []
 let i = 0
 let message = ""
 let rm = ""
