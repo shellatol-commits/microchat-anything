@@ -3,7 +3,7 @@ input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
     control.reset()
 })
 input.onButtonPressed(Button.A, function () {
-    if (i == text_list.length) {
+    if (i == text_list.length - 1) {
         i = 0
     } else {
         i += 1
@@ -83,7 +83,8 @@ function setup () {
     ":",
     ".",
     ",",
-    "?"
+    "?",
+    "-"
     ]
 }
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
